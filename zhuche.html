@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content".ValueJob" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"><!--适应手机屏幕大小，允许最小，允许最大 320*356 -->
+  <meta content="telephone=no" name="format-detection"><!--禁止数字拨号-->
+  <meta content="yes" name="apple-mobile-web-app-capable"> <!--删除默认的苹果工具栏和菜单栏-->
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"> <!--控制状态栏显示样式-->
+  <meta content="false" id="twcClient" name="twcClient">
+  <script src="js/auto-size.js"></script>
+  <script type="text/javascript" src="js/bubbly-bg.js"></script>
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
+  <title>Document</title>
+</head>
+<body style="background: url('images/bg.jpg') repeat-x center center #367def;padding-top:1.4rem;">
+  <div class="qkl_denglu_div1">
+    <div class="f_l"><img src="images/dacha.png" alt="" class="qkl_denglu_div2" /></div>
+    <div class="f_r">已有账户?</div>
+  </div>
+  <div class="qkl_denglu_div3">
+    <div class="qkl_denglu_div4">注册VCK Coin</div>
+    <div class="qkl_denglu_div5">请认真填写您的VCK Coin账号,这将是唯一登录凭证</div>
+    <div class="qkl_denglu_div6">
+      <div class="qkl_denglu_div7 f_l">+86</div>
+      <input type="text" name="" class="f_l qkl_denglu_input1" placeholder="手机号">
+    </div>
+     <div class="qkl_denglu_div8">
+      <input type="text" name="" class="f_l qkl_zhuche_input1" placeholder="短信验证码">
+      <div class="qkl_zhche_div1 f_r">发送验证码</div>
+    </div>
+    <div class="qkl_denglu_div8">
+      <input type="text" name="" class="f_l qkl_denglu_input2" placeholder="密码">
+      <div class="qkl_denglu_div9 f_r">&nbsp;</div>
+    </div>
+    <div class="qkl_denglu_div10">注册</div>
+    <div class="qkl_denglu_div11">
+      <div class="f_l qkl_zhche_div2">点击“注册”按钮，即表示您同意</div>
+    </div>
+    <div class="qkl_zhche_div3">VCK Coin网络服务条款</div>
+  </div>
+</body>
+</html>
+<script type="text/javascript">
+  bubbly();
+  let configs = [
+    {},
+    {
+      colorStart: "#111",
+      colorStop: "#422",
+      bubbleFunc: () => `hsla(0, 100%, 50%, ${Math.random() * 0.25})`
+    },
+    {
+      colorStart: "#4c004c",
+      colorStop: "#1a001a",
+      bubbleFunc: () => `hsla(${Math.random() * 360}, 100%, 50%, ${Math.random() * 0.25})`
+    },
+    {
+      colorStart: "#fff4e6",
+      colorStop: "#ffe9e4",
+      blur: 1,
+      compose: "source-over",
+      bubbleFunc: () => `hsla(${Math.random() * 50}, 100%, 50%, .3)`
+    }
+  ];
+  document.addEventListener("click", function (e) {
+    if (e.target.hasAttribute("data-config-nr")) {
+      document.body.removeChild(document.querySelector("canvas"));
+      bubbly(configs[e.target.getAttribute("data-config-nr")]);
+    }
+  });
+  </script>
+  
